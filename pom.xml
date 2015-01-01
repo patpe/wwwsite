@@ -4,12 +4,13 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>se.raketavdelningen</groupId>
-    <artifactId>wwwsite</artifactId>
+    <artifactId>www-site</artifactId>
     <version>1.0-SNAPSHOT</version>
     <packaging>jar</packaging>
 
-    <name>Public WWW Site</name>
+    <name>Public www site</name>
     <description>Web site for raketavdelningen.se</description>
+    <url>https://www.raketavdelningen.se</url>
 
     <parent>
         <groupId>org.springframework.boot</groupId>
@@ -23,6 +24,28 @@
         <start-class>se.raketavdelningen.site.WwwSiteApplication</start-class>
         <java.version>1.7</java.version>
     </properties>
+
+    <developers>
+        <developer>
+            <id>patrik</id>
+            <email>patrikp@gmail.com</email>
+            <name>Patrik Persson</name>
+        </developer>
+    </developers>
+
+    <issueManagement>
+        <system>RedMine</system>
+        <url>https://tracker.raketavdelningen.se/projects/www-site</url>
+    </issueManagement>
+    <ciManagement>
+        <system>Jenkins</system>
+        <url>https://build.raketavdelningen.se</url>
+    </ciManagement>
+    <scm>
+        <connection>scm:git:git://src.raketavdelningen.se/patrik/wwwsite.git</connection>
+        <url>https://src.raketavdelningen.se/patrik/www-site/tree/master</url>
+    </scm>
+
 
     <dependencies>
         <dependency>
