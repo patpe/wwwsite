@@ -43,7 +43,7 @@
     </ciManagement>
     <scm>
         <connection>scm:git:git://src.raketavdelningen.se/patrik/wwwsite.git</connection>
-        <url>https://src.raketavdelningen.se/patrik/www-site/tree/master</url>
+        <url>https://src.raketavdelningen.se/patrik/wwwsite/tree/master</url>
     </scm>
 
     <build>
