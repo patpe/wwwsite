@@ -14,10 +14,10 @@ public class FederationController {
 	private static final Logger LOG = LoggerFactory.getLogger(FederationController.class);
 	
 	@RequestMapping(method = RequestMethod.GET, value = "/federation")
-	public ModelAndView handleFederation(@RequestParam("TargetAddress") String targetAddress) {
-		LOG.debug("handleFederation({})", targetAddress);		
+	public ModelAndView handleFederation(@RequestParam("relayState") String relayState) {
+		LOG.debug("handleFederation({})", relayState);		
 		ModelAndView result = new ModelAndView();
-		result.setViewName("redirect:" + targetAddress);
+		result.setViewName("redirect:" + relayState);
 		return result;
 	}
 }
