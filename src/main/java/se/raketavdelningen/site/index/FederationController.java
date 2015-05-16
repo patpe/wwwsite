@@ -3,7 +3,6 @@ package se.raketavdelningen.site.index;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
-import org.springframework.util.Base64Utils;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -16,13 +15,9 @@ public class FederationController {
 	
 	@RequestMapping(method = RequestMethod.GET, value = "/federation")
 	public ModelAndView handleFederation(@RequestParam("TargetAddress") String targetAddress) {
-		LOG.debug("handleFederation({})", targetAddress);
-		
-		String decodedAddress = new String(Base64Utils.decodeFromString(targetAddress));
-		LOG.debug("decoded address to {}", decodedAddress);
-		
+		LOG.debug("handleFederation({})", targetAddress);		
 		ModelAndView result = new ModelAndView();
-		result.setViewName("redirect:" + decodedAddress);
+		result.setViewName("redirect:" + targetAddress);
 		return result;
 	}
 }
